@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root and App Styles */
+:root {
+  --container-max: 1126px;
+  --spacing-base: 2.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Layout Structure */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--spacing-base);
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Content Centering - Ensure content is centered with max width */
+.page-container > * {
+  max-width: var(--container-max);
+  width: 100%;
+  padding: 0;
+}
+
+/* Tailwind override - ensure max-width works correctly */
+.page-container > *[class*="max-w-"] {
+  width: 100%;
+}
+
+/* Table and Form Styles */
+.table td,
+.table th {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
