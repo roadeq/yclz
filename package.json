@@ -1,5 +1,5 @@
 {
-  "private": false,
+  "private": true,
   "workspaces": [
     "frontend",
     "backend"
@@ -13,6 +13,6 @@
   "devDependencies": {
     "concurrently": "^8.2.0"
   },
-  "name": "yacloz",
-  "version": "1.0.2"
+  "name": "",
+  "version": ""
 }
